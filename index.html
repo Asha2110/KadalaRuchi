@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kadala Ruchi | Premium Family Restaurant</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <h1>Kadala Ruchi</h1>
+  <nav class="nav">
+    <a href="#">Home</a>
+    <a href="#order">Menu</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div>
+    <h2>Authentic Coastal Flavours</h2>
+    <p>Fresh seafood • Traditional spices • Family dining</p>
+    <a href="#menu" class="btn btn-primary">View Menu</a>
+    <a href="https://wa.me/918970699527" class="btn btn-outline">Order on WhatsApp</a>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-title">
+    <span>OUR STORY</span>
+    <h2>About Kadala Ruchi</h2>
+  </div>
+  <div class="about">
+    <p>Kadala Ruchi is a family restaurant known for authentic coastal cuisine, rich flavours, and freshly prepared seafood. Every dish reflects tradition, quality, and love for food.</p>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="section-title">
+    <span>OUR SPECIALS</span>
+    <h2>Signature Dishes</h2>
+  </div>
+  <div class="menu-grid">
+    <div class="menu-card"><h3>Seafood Specials</h3><p>Fresh catch prepared daily</p></div>
+    <div class="menu-card"><h3>Fish Tawa Fry</h3><p>Traditional coastal style</p></div>
+    <div class="menu-card"><h3>Neer Dosa & Chicken Sukka</h3><p>Dry roasted perfection</p></div>
+    <div class="menu-card"><h3>Chicken Biryani</h3><p>Slow cooked flavours</p></div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="section-title">
+    <span>WHY US</span>
+    <h2>Why People Love Kadala Ruchi</h2>
+  </div>
+  <div class="why-grid">
+    <div><h3>Fresh Ingredients</h3><p>Only the best quality used</p></div>
+    <div><h3>Authentic Taste</h3><p>True coastal flavours</p></div>
+    <div><h3>Family Friendly</h3><p>Comfortable dining</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="map-container" style="max-width:1000px;margin:0 auto 40px;">
+    <iframe src="https://www.google.com/maps?q=Jigani%20Opp%20DLF%20Woodland%20Heights&output=embed" width="100%" height="300" style="border:0;border-radius:16px;" loading="lazy"></iframe>
+  </div>
+  <div class="section-title">
+    <span>VISIT US</span>
+    <h2>Location & Timings</h2>
+  </div>
+  <div class="about">
+    <p>📍 Jigani, Opp DLF Woodland Heights<br>
+    🕒 Open Daily: 11:00 AM – 10:30 PM<br>
+    📞 +91 8892110402</p>
+  </div>
+</section>
+
+
+<!--<a class="whatsapp" href="https://wa.me/918892110402">WhatsApp Order</a>-->
+
+
+<!-- QR MENU PAGE 
+<section id="qr-menu" style="background:#121212;color:white;text-align:center;">
+  <div class="section-title">
+    <span style="color:#C9A24D">SCAN MENU</span>
+    <h2>QR Menu</h2>
+  </div>
+  <p>Scan the QR code to view our full menu and order instantly</p>
+  <img src="qr-menu.png" alt="QR Menu" style="width:220px;margin:30px auto;display:block;border-radius:16px;">
+</section>
+-->
+<!-- ORDER SECTION -->
+<section id="order">
+  <div class="section-title">
+    <span>ORDER ONLINE</span>
+    <h2>Order via WhatsApp</h2>
+  </div>
+
+  <section class="products">
+  <div class="menugrid">
+    <div class="menu-card">
+      <h3>Fish Meals</h3>
+      <p>₹150</p>
+      <button class="btn btn-primary" onclick="addToCart('Fish_Meals',150)">Add</button>
+    </div>
+    <div class="menu-card">
+      <h3>Fish Tawa Fry</h3>
+      <p>₹220</p>
+      <button class="btn btn-primary" onclick="addToCart('Fish_TawaFry',220)">Add</button>
+    </div>
+    <div class="menu-card">
+      <h3>Chicken Biryani</h3>
+      <p>₹180</p>
+      <button class="btn btn-primary" onclick="addToCart('Chicken_Biryani',180)">Add</button>
+    </div>
+    <div class="menu-card">
+      <h3>Neer Dosa & Chicken Sukka</h3>
+      <p>₹140</p>
+      <button class="btn btn-primary" onclick="addToCart('NeerDosa_ChickenSukka',140)">Add</button>
+    </div>
+    <div class="menu-card">
+      <h3>Chicken Sukka</h3>
+      <p>₹170</p>
+      <button class="btn btn-primary" onclick="addToCart('Chicken_Sukka',170)">Add</button>
+    </div>
+    <div class="menu-card">
+      <h3>Chicken Kabab</h3>
+      <p>₹150</p>
+      <button class="btn btn-primary" onclick="addToCart('Chicken_Kabab',150)">Add</button>
+    </div>
+  </div>
+  </section>
+
+  <div style="max-width:600px;margin:50px auto;text-align:center;">
+    <h3>Your Cart</h3>
+    <div id="cartItems"></div>
+    <p><strong>Total: ₹<span id="cartTotal">0</span></strong></p>
+    <a class="btn btn-outline" onclick="placeOrder()">Place Order on WhatsApp</a>
+  </div>
+</section>
+<footer>
+  <p>© 2026 Kadala Ruchi. All Rights Reserved.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
