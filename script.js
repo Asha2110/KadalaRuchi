@@ -28,10 +28,20 @@
 
     cart.forEach((c, i) => {
       total += c.price * c.quantity;
-      cartDiv.innerHTML +=`<p>${i+1}. ${c.item} x ${c.quantity} = ₹${c.price * c.quantity}</p>`;
+      cartDiv.innerHTML +=`<p>${i+1}. ${c.item} x ${c.quantity} = ₹${c.price * c.quantity}
+      <button onclick="changeQuantity(${i},-1)">-</button>
+      <button onclick="changeQuantity(${i},+1)">+</button></p>`;
     });
 
     totalSpan.textContent = total;
+  }
+  window.changeQuantity = function (index, delta){
+    cart[index].quantity += delta;
+    //Remove item if quantity becomes 0
+    if(cart[index].quantity <= 0){
+      cart.splice(index, 1);
+    }
+    renderCart();
   }
 
   window.placeOrder = function () {
@@ -47,3 +57,4 @@
 
     window.open(`https://wa.me/918970699527?text=${message}`, '_blank');
   }
+
